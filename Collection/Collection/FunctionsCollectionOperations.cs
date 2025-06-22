@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Collection
 {
-    internal class FunctionsCollectionOperations
+    internal class FunctionsCollectionOperations : ICollectionOperations
     {
         public void ListOperations(List<string> list)
         {
@@ -33,6 +33,16 @@ namespace Collection
             {
                 list.InsertRange(2, new List<string> {"2","3","4"});
             }
+        }
+
+        public void DictionaryOperations(Dictionary<string, int> dictionary)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void StackOperations(Stack<DateTime> stack)
+        {
+            throw new NotImplementedException();
         }
     }
 }
