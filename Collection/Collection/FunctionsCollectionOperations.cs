@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,21 @@ namespace Collection
 
         public void StackOperations(Stack<DateTime> stack)
         {
+            if(stack != null)
+            {
+                if (stack.Count > 0)
+                {
+                    if (stack.Peek().CompareTo(DateTime.Now) < 0)
+                    {
+                        stack.Pop();
+                        stack.Push(DateTime.Now);
+                    }
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(stack));
+            }
         }
     }
 }
