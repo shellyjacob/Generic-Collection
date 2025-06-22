@@ -64,15 +64,12 @@ namespace Collection
 
         public void StackOperations(Stack<DateTime> stack)
         {
-            if(stack != null)
+            if(stack != null && stack.Count > 0)
             {
-                if (stack.Count > 0)
+                if (stack.Peek().CompareTo(DateTime.Now) < 0)
                 {
-                    if (stack.Peek().CompareTo(DateTime.Now) < 0)
-                    {
-                        stack.Pop();
-                        stack.Push(DateTime.Now);
-                    }
+                    stack.Pop();
+                    stack.Push(DateTime.Now);
                 }
             }
             else
