@@ -37,7 +37,10 @@ namespace Collection
 
         public void DictionaryOperations(Dictionary<string, int> dictionary)
         {
-            throw new NotImplementedException();
+            if (dictionary.ContainsKey("scuba") && dictionary["scuba"] == 6)
+            {
+                dictionary.Add("dive", 6);
+            }
         }
 
         public void StackOperations(Stack<DateTime> stack)
